@@ -1,5 +1,42 @@
+한글
 /**************************************************************
-  Target MCU & internal clock speed: ATtiny13 @ 9.6Mhz
+  목표 MCU: ATtiny13A
+  클럭유형: 내부 
+  클럭속도: 9.6Mhz
+  코드명    : RC315Mhz_SolderCtrl_CD4021_Tiny13.ino
+  주 작성자  : 김인수 (insoo@hotmail.com)
+  첫 작성일    : 2015.4.2
+  최종 갱신일  : 2015.8.10 월
+  목적:
+    전원제어 릴레이의 끄고 켜짐 주기 제어를 통해 납떔기(선풍기든 무엇이든)의 온도를 적절히 조절한다.
+  설명    : 
+    1) 시스템이 시작되면, 처음 90초간 relayPin에 전원이 공급된다. 
+      이후 무선주파수 리모컨을 이용한 사용자의 지정에 따라 켜지고 꺼짐 주기가 정해지고,  반복된다.
+      초기 설정 주기는 10초.  
+       
+    2) 무선 리모컨의 버튼을 통해 전원공급 주기 설정
+       A 버튼: 20 초
+       B 버튼: 10 초
+    3) 시스템의 재시동 및 정지는 아래 버튼으로 가능
+       C 버튼: 지속동작시간 계수기(안전타이머)를 초기화 함으로써 시스템 재 시동
+       D 버튼: 지속동작시간 계수기(안전타이머)의 경계치를 넘김으로써 시스템 정지
+       
+  참조:
+  ** RC315Mhz_Decode.ino
+  ** est of RF decoder using SC2272-M4 chip
+  **
+  ** Written for and tested with Arduino Uno R3
+  ** This example refered from the following link of Edward Comer.
+  ** https://dzrmo.wordpress.com/2012/07/08/remote-control-pt2272-for-android/
+  ** LICENSE: GNU General Public License, version 3 (GPL-3.0)
+*****************************************************************/  
+
+
+영문(코딩은 전 세계인들과 협력해서 하는 경우가 많으므로, 영어로 코드를 설명할 수 있어야 한다.)
+/**************************************************************
+  Target MCU: ATtiny13A
+  Clock type: Internal
+  Clock speed: 9.6Mhz
   Name    : RC315Mhz_SolderCtrl_CD4021_Tiny13.ino
   Author  : Insoo Kim (insoo@hotmail.com)
   Date    : April 02, 2015
@@ -17,8 +54,6 @@
        C button: system on again by clearing the safety counter
        D button: system off by overflowing the safety counter
     
-  Notes   : 
-    Clock source: Internal 9.6Mhz of ATTiny13A
   Ref:
   ** RC315Mhz_Decode.ino
   ** Test of RF decoder using SC2272-M4 chip
