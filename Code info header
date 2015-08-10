@@ -1,0 +1,30 @@
+/**************************************************************
+  Target MCU & internal clock speed: ATtiny13 @ 9.6Mhz
+  Name    : RC315Mhz_SolderCtrl_CD4021_Tiny13.ino
+  Author  : Insoo Kim (insoo@hotmail.com)
+  Date    : April 02, 2015
+  Update  : Mon Aug 10, 2015
+  Desc    : 
+    1) When system is on, the 1st power cycle engaged to relayPin for 90 sec,
+        then the relayPin will on and off by user selectable on-going interval
+        via RF remote control keys. 
+       Default on-going interval is 10 sec.
+       
+    2) Set the on-going interval of relayPin on/off via RF remote control keys. 
+       A button: 20 sec
+       B button: 10 sec 
+    3) Turn on or off the system by resetting or overflowing the safety counter.
+       C button: system on again by clearing the safety counter
+       D button: system off by overflowing the safety counter
+    
+  Notes   : 
+    Clock source: Internal 9.6Mhz of ATTiny13A
+  Ref:
+  ** RC315Mhz_Decode.ino
+  ** Test of RF decoder using SC2272-M4 chip
+  **
+  ** Written for and tested with Arduino Uno R3
+  ** This example refered from the following link of Edward Comer.
+  ** https://dzrmo.wordpress.com/2012/07/08/remote-control-pt2272-for-android/
+  ** LICENSE: GNU General Public License, version 3 (GPL-3.0)
+*****************************************************************/  
