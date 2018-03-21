@@ -1,0 +1,11 @@
+TFTLCD.cpp
+
+<Original>
+//#define INVERT_X
+// If your LCD display chip has inverted Y addresses define this:
+#define INVERT_Y
+
+<Edited>
+#define INVERT_X
+// If your LCD display chip has inverted Y addresses define this:
+//#define INVERT_Y

@@ -1,0 +1,5 @@
+http://misc.ws/2013/11/08/touch-screen-shield-for-arduino-uno/
+
+http://misc.ws/2013/11/03/bitmap-converter-for-arduino-lcd/
+
+http://www.airspayce.com/mikem/TFTLCD-mikem.zip
